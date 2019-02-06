@@ -1,0 +1,14 @@
+.header{
+    text-align: center;
+    height: 75px;
+    background-color: #2196f3;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainTabs-root-1{
+    width: 100% !important;
+}
