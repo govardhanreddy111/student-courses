@@ -8,7 +8,6 @@ export const httpRequest = (type,resource,params) =>{
         'Content-Type': 'application/json'
     };
     options.headers = headers;
-    debugger;
     switch (type) {
         case CREATE:
             url = resource;

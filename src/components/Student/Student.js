@@ -47,15 +47,16 @@ export default class Student extends Component{
         });
     }
     fetchStudents(){
-        return httpRequest(GET_LIST,GET_STUDENTS_API).then((res)=>{
-            let items =  res.data.data.map((item,key)=>{
-                return {
-                    ...item,
-                    key : key
-                }
+        return httpRequest(GET_LIST,GET_STUDENTS_API)
+            .then((res)=>{
+                let items =  res.data.data.map((item,key)=>{
+                    return {
+                        ...item,
+                        key : key
+                    }
+                });
+                this.setState({students : items});
             });
-            this.setState({students : items});
-        })
     }
     addStudent(){
         this.toggle();
@@ -108,7 +109,7 @@ export default class Student extends Component{
         return(
             <div>
                 <Button color="primary" onClick={this.addStudent}>+ Add Student</Button>
-                <div>List of Students</div>
+                <div className="heading">List of Students</div>
                 <Table bordered>
                     <thead>
                     <tr>
@@ -134,7 +135,7 @@ export default class Student extends Component{
                             <td>{student.course_id}</td>
                             <td>{student.staff_id}</td>
                             <td><Button color='info' onClick={this.editStudent.bind(this,student)}>Edit</Button></td>
-                            <td><Button color="danger">Delete</Button></td>
+                            <td><Button color="danger" onClick={this.deleteStudent.bind(this,student.id)}>Delete</Button></td>
                         </tr>
                     ) : null}
                     </tbody>
@@ -166,6 +167,7 @@ export default class Student extends Component{
                             <FormGroup>
                                 <Label for="staff_id">Staff Id</Label>
                                 <Input type="select" name="staff_id" id="staff_id" onChange={this.handleChange.bind(this,'staff_id')} value={this.state.newData.staff_id}>
+                                    <option></option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -176,6 +178,7 @@ export default class Student extends Component{
                             <FormGroup>
                                 <Label for="course_id">Course Id</Label>
                                 <Input type="select" name="course_id" id="course_id" onChange={this.handleChange.bind(this,'course_id')} value={this.state.newData.course_id}>
+                                    <option>1</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>

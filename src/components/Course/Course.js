@@ -97,7 +97,7 @@ export default class Course extends Component{
         return(
             <div>
                 <Button color="primary" onClick={this.addCourse}>+ Add Course</Button>
-                <div>List of Courses</div>
+                <div className="heading">List of Courses</div>
                 <Table bordered>
                     <thead>
                     <tr>

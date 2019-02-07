@@ -4,9 +4,9 @@ export const apiRequest = (url,options)=>{
                 return response.json();
             } else {
                 if (response.status < 500) {
-                    return response.json().then(responseJson => Promise.reject({ status: response.status, message: responseJson.payload.sys_message }));
+                    return response.json().then(responseJson => Promise.reject({ status: response.status, message: responseJson.statusText }));
                 } else {
-                    return Promise.reject({ status: response.status, message: "Internal server error" });
+                    return Promise.reject({status: response.status, message: "Internal server error"});
                 }
             }
         })

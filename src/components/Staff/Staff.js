@@ -106,7 +106,7 @@ export default class Staff extends Component{
         return(
             <div>
                 <Button color="primary" onClick={this.addStaff}>+ Add Staff</Button>
-                <div>List of Staff</div>
+                <div className="heading">List of Staff</div>
                 <Table bordered>
                     <thead>
                     <tr>
