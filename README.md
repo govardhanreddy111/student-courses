@@ -4,7 +4,7 @@ Run below commands in Terminal <br>
 
 git clone <code>https://github.com/govardhanreddy111/student-courses/</code><br>
 
-cd myApp <br>
+cd student-courses <br>
 
 npm install <br>
 
