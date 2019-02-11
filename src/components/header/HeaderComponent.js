@@ -6,7 +6,7 @@ class HeaderComponent extends Component{
     render(){
         return(
                 <div className='header'>
-                    <div>Welcome</div>
+                    <div>Welcome Vu Institute</div>
                 </div>
         );
     }

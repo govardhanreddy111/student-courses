@@ -26,5 +26,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy" : "https://3c39a78c.ngrok.io"
+  "proxy" : "http://vuinstitute.us-east-2.elasticbeanstalk.com"
 }
